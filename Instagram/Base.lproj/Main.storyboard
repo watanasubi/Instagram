@@ -210,6 +210,7 @@
                                 </constraints>
                                 <state key="normal" title="キャンセル" backgroundImage="btn"/>
                                 <connections>
+                                    <action selector="funchandleCancelButton:" destination="urj-jG-NnZ" eventType="touchUpInside" id="EHZ-32-vmX"/>
                                     <action selector="handleCancelButton:" destination="urj-jG-NnZ" eventType="touchUpInside" id="hD8-bJ-ahn"/>
                                 </connections>
                             </button>

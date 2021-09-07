@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,7 +32,7 @@
                         <state key="normal" title="Button" image="like_none"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FFz-H8-V1o">
-                        <rect key="frame" x="30" y="446" width="345" height="120"/>
+                        <rect key="frame" x="30" y="446" width="345" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -68,38 +69,53 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="n5a-2x-IHe">
+                        <rect key="frame" x="10" y="474" width="385" height="102"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="4gp-mE-Wps" firstAttribute="leading" secondItem="li2-0Y-lp1" secondAttribute="trailing" constant="10" id="0yB-Lh-op5"/>
-                    <constraint firstItem="FFz-H8-V1o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="FQi-V3-ZhZ"/>
+                    <constraint firstItem="FFz-H8-V1o" firstAttribute="top" secondItem="63O-ln-dey" secondAttribute="bottom" constant="10" id="B35-Fw-AQ1"/>
                     <constraint firstItem="qe9-Zd-111" firstAttribute="leading" secondItem="MzE-7n-Evc" secondAttribute="trailing" constant="10" id="GxT-1t-W72"/>
+                    <constraint firstAttribute="trailing" secondItem="n5a-2x-IHe" secondAttribute="trailing" constant="10" id="KHE-qA-tHf"/>
+                    <constraint firstAttribute="bottom" secondItem="n5a-2x-IHe" secondAttribute="bottom" constant="10" id="KLy-w6-xDR"/>
                     <constraint firstItem="li2-0Y-lp1" firstAttribute="leading" secondItem="qe9-Zd-111" secondAttribute="trailing" constant="10" id="N16-47-0wh"/>
+                    <constraint firstItem="n5a-2x-IHe" firstAttribute="top" secondItem="FFz-H8-V1o" secondAttribute="bottom" constant="8.5" id="N9h-iY-ltw"/>
                     <constraint firstItem="4gp-mE-Wps" firstAttribute="trailing" secondItem="Jva-As-Fft" secondAttribute="trailing" id="Qle-35-pne"/>
+                    <constraint firstAttribute="bottom" secondItem="n5a-2x-IHe" secondAttribute="bottom" constant="10" id="Rfp-gB-OYp"/>
                     <constraint firstItem="63O-ln-dey" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="T0n-C2-Inc"/>
                     <constraint firstItem="FFz-H8-V1o" firstAttribute="top" secondItem="MzE-7n-Evc" secondAttribute="bottom" constant="10" id="TGN-GK-ytp"/>
                     <constraint firstItem="li2-0Y-lp1" firstAttribute="centerY" secondItem="63O-ln-dey" secondAttribute="centerY" id="VGZ-fe-xM4"/>
+                    <constraint firstItem="n5a-2x-IHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="WJO-5J-hRt"/>
                     <constraint firstItem="Jva-As-Fft" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Wu9-gP-Swm"/>
+                    <constraint firstItem="n5a-2x-IHe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="ZID-Io-g8a"/>
                     <constraint firstItem="Jva-As-Fft" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Zun-sH-HZe"/>
                     <constraint firstItem="FFz-H8-V1o" firstAttribute="top" secondItem="63O-ln-dey" secondAttribute="bottom" constant="10" id="afm-kr-cDS"/>
+                    <constraint firstItem="n5a-2x-IHe" firstAttribute="top" secondItem="FFz-H8-V1o" secondAttribute="bottom" constant="10" id="b3q-n4-f0A"/>
                     <constraint firstItem="MzE-7n-Evc" firstAttribute="leading" secondItem="63O-ln-dey" secondAttribute="trailing" constant="10" id="d87-yE-Nc9"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FFz-H8-V1o" secondAttribute="trailing" constant="10" id="dZO-40-mCJ"/>
                     <constraint firstItem="FFz-H8-V1o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="fYL-Vl-mgO"/>
                     <constraint firstItem="MzE-7n-Evc" firstAttribute="centerY" secondItem="63O-ln-dey" secondAttribute="centerY" id="h8Z-yI-1IH"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="FFz-H8-V1o" secondAttribute="bottom" constant="10" id="k1h-bn-G9N"/>
                     <constraint firstAttribute="trailingMargin" secondItem="FFz-H8-V1o" secondAttribute="trailing" constant="10" id="kmU-f5-Tze"/>
                     <constraint firstItem="63O-ln-dey" firstAttribute="top" secondItem="Jva-As-Fft" secondAttribute="bottom" constant="10" id="pJ1-cS-OJh"/>
                     <constraint firstItem="MzE-7n-Evc" firstAttribute="centerY" secondItem="63O-ln-dey" secondAttribute="centerY" id="pcU-HL-CeA"/>
+                    <constraint firstAttribute="trailing" secondItem="n5a-2x-IHe" secondAttribute="trailing" constant="10" id="pmb-Hu-EZN"/>
                     <constraint firstItem="qe9-Zd-111" firstAttribute="centerY" secondItem="63O-ln-dey" secondAttribute="centerY" id="pyN-SD-gTB"/>
                     <constraint firstAttribute="trailingMargin" secondItem="Jva-As-Fft" secondAttribute="trailing" id="ude-cS-Qrs"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="FFz-H8-V1o" secondAttribute="bottom" constant="10" id="wnU-SJ-vTG"/>
                     <constraint firstItem="4gp-mE-Wps" firstAttribute="centerY" secondItem="63O-ln-dey" secondAttribute="centerY" id="yXd-aI-d6c"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="FFz-H8-V1o" id="xpD-Lb-BrV"/>
-                <outlet property="commentButton" destination="li2-0Y-lp1" id="PB0-gz-LcJ"/>
-                <outlet property="commentLabel" destination="4gp-mE-Wps" id="8eZ-xZ-tZu"/>
+                <outlet property="commentButton" destination="li2-0Y-lp1" id="86o-1s-f4z"/>
+                <outlet property="commentLabel" destination="4gp-mE-Wps" id="sNv-Cx-edt"/>
+                <outlet property="commentView" destination="n5a-2x-IHe" id="Cr6-Il-Xdp"/>
                 <outlet property="dateLabel" destination="qe9-Zd-111" id="Lxg-8l-zld"/>
                 <outlet property="likeButton" destination="63O-ln-dey" id="HeW-YS-2qP"/>
                 <outlet property="likeLabel" destination="MzE-7n-Evc" id="fOl-Dy-JJ7"/>
@@ -107,10 +123,52 @@
             </connections>
             <point key="canvasLocation" x="378.98550724637687" y="82.700892857142847"/>
         </tableViewCell>
+        <viewController id="kLv-0p-Isk" customClass="PostCommentController" customModule="Instagram" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="9AJ-wp-Yk1">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメントを入力" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gQi-4u-G5s">
+                        <rect key="frame" x="52" y="240" width="311" height="34"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRg-Mo-aGX">
+                        <rect key="frame" x="52" y="314" width="300" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="投稿" backgroundImage="btn"/>
+                        <connections>
+                            <action selector="postcomment:" destination="kLv-0p-Isk" eventType="touchUpInside" id="dnA-eS-WuL"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xq-pt-UnC">
+                        <rect key="frame" x="57" y="386" width="300" height="40"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <state key="normal" title="キャンセル" backgroundImage="btn"/>
+                        <connections>
+                            <action selector="cancel:" destination="kLv-0p-Isk" eventType="touchUpInside" id="Mly-hG-pdu"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="svf-5G-JLQ"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            </view>
+            <connections>
+                <outlet property="commentField" destination="gQi-4u-G5s" id="nHp-sI-0mI"/>
+            </connections>
+            <point key="canvasLocation" x="1131.8840579710145" y="199.55357142857142"/>
+        </viewController>
     </objects>
     <resources>
         <image name="btn" width="300" height="40"/>
         <image name="like_none" width="40" height="40"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

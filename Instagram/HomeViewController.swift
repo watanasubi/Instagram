@@ -13,30 +13,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var tableView: UITableView!
     
-    //コメントボタンのメソッド
-    @objc func handleCommentButton(_ sender: UIButton, forEvent event: UIEvent) {
+    // セル内のボタンがタップされた時に呼ばれるメソッド（コメントボタン）
+        @objc func commentButton(_ sender: UIButton, forEvent event: UIEvent) {
+            print("DEBUG_PRINT: コメントボタンがタップされました。")
+            
+            // タップされたセルのインデックスを求める
             let touch = event.allTouches?.first
             let point = touch!.location(in: self.tableView)
             let indexPath = tableView.indexPathForRow(at: point)
+
+            // 配列からタップされたインデックスのデータを取り出す
             let postData = postArray[indexPath!.row]
-            let alertController = UIAlertController(title: "comment 送信", message: "", preferredStyle: .alert)
-            alertController.addTextField { textField in
-                textField.placeholder = "comment 入力して下さい"
-            }
-            
-            alertController.addAction(UIAlertAction(title: "送信", style: .default, handler: {(action) in
-                let commentText = alertController.textFields![0].text!
-                let name = Auth.auth().currentUser!.displayName!
-                let comment = "\(commentText):\(name)"
-                let update = FieldValue.arrayUnion([comment])
-                let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
-                postRef.updateData(["comments": update])
-                
-            }))
-            
-            
-            present(alertController, animated: true)
-        }
+            // postIDを取得する
+            let postId = postData.id
+           // storyboardのインスタンス取得
+            let storyboard: UIStoryboard = self.storyboard!
+           // 遷移先ViewControllerのインスタンス取得
+            let PostCommentController = storyboard.instantiateViewController(withIdentifier: "postcomment") as! PostCommentController
+          // 遷移先画面に受け渡す
+            PostCommentController.postId = postId
+
+            self.present(PostCommentController, animated: true, completion: nil)
+      }
     
     // セル内のボタンがタップされた時に呼ばれるメソッド
         @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
@@ -128,6 +126,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
                 // セル内のボタンのアクションをソースコードで設定する
                         cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
+                
+                
+                cell.commentButton.addTarget(self, action:#selector(commentButton(_:forEvent:)), for: .touchUpInside)
                 
                 return cell
             }
