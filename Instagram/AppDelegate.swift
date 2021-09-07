@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-@main
+@UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     // SVProgressHUDをXcode11以上で実行するための環境調整コード
