@@ -7,6 +7,8 @@
 
 import UIKit
 import FirebaseStorageUI
+import Firebase
+
 
 class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postImageView: UIImageView!
@@ -17,7 +19,6 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var commentButton: UIButton!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var commentView: UITextView!
-    
 
     var postId : String!
         
@@ -58,8 +59,9 @@ class PostTableViewCell: UITableViewCell {
                }
             // commentの内容をセルに表示
             self.commentLabel.text = "\(postData.comment) "
+            
             // commentの内容をセルに表示
             self.commentView.text = "\(postData.comment) "
             print("DEBUG_PRINT: \(String(describing: commentView.text)))")
-           }
+                   }
     }
