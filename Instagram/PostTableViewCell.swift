@@ -36,7 +36,7 @@ class PostTableViewCell: UITableViewCell {
                postImageView.sd_setImage(with: imageRef)
 
                // キャプションの表示
-               self.captionLabel.text = "\(postData.name!) : \(postData.caption!)"
+               self.captionLabel.text = "\(postData.name!) 「 \(postData.caption!)」"
                // 日時の表示
                self.dateLabel.text = ""
                if let date = postData.date {
@@ -58,7 +58,19 @@ class PostTableViewCell: UITableViewCell {
                    self.likeButton.setImage(buttonImage, for: .normal)
                }
             // commentの内容をセルに表示
-            self.commentLabel.text = "\(postData.comment) "
+            
+            var commentText = ""
+                  // postData.commentから値を1つずつcommentという変数で取り出す。
+                  for comment in postData.comment {
+                   // 取り出した文字列をcommentTextにつなげていく
+                   commentText += comment
+                  }
+                  print(commentText)
+            
+            self.commentLabel.text = commentText
+            
+          
+            
             
             // commentの内容をセルに表示
             self.commentView.text = "\(postData.comment) "

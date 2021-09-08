@@ -28,6 +28,7 @@ class PostData: NSObject {
         if let likes = postDic["likes"] as? [String] {
             self.likes = likes
         }
+        
         if let myid = Auth.auth().currentUser?.uid {
             // likesの配列の中にmyidが含まれているかチェックすることで、自分がいいねを押しているかを判断
             if self.likes.firstIndex(of: myid) != nil {
@@ -35,6 +36,9 @@ class PostData: NSObject {
                 self.isLiked = true
             }
         }
+        
+      
+        
         if let comment = postDic["comment"] as? [String] {
             self.comment = comment
         }
