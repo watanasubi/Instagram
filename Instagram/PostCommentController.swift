@@ -20,7 +20,7 @@ class PostCommentController: UIViewController {
         
         //ユーザー名とコメントを配列でpost
         if commentField.text != "" {
-            let comment_name = "名前:" + user! + " コメント「" + commentField.text! + "」"
+            let comment_name =  " 名前:" + user! + " コメント:" + commentField.text! + "\n"
             var updateValue: FieldValue
             updateValue = FieldValue.arrayUnion([comment_name as Any])
             let postRef = Firestore.firestore().collection(Const.PostPath).document(postId)
